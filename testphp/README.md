@@ -16,10 +16,19 @@ If Composer is installed globally, run
 ```bash
 composer create-project --prefer-dist cakephp/app [app_name]
 ```
-
+3. Run command 'commposer' im prompt cmd
+4. Enter in folder bin of yout directory project
+5. Run command 'cake server'
+6. Acess in browser the url localhost:'port'
 You should now be able to visit the path to where you installed the app and see the default home page.
 
 ## Configuration
 
 Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application.
+
+In your phpmyadmin import the script sql named 'task_manager.sql' to create DB an Table
+
+Para acessar a Api Rest usar a url: localhost:'port'/Tasks/index.json
+Os testes de add, edit e delete podem ser feitos usando a extensão do Google Chrome Advanced REST client
+https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo
