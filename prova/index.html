@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Prova PHP</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="">
+
+
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-faded">
+    <header id="first">
+    <div class="header-content">
+        <div class="inner">
+            <h1>Alex Sander Corrêa Martins</h1>
+            <h5 class="wow fadeIn text-normal wow fadeIn">Teste de conhecimento em PHP</h5>
+            <a href="#one" class="btn btn-primary-outline btn-xl page-scroll wow fadeInUp m-t-3">Começar</a>
+        </div>
+    </div>
+</header>
+<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            ☰
+        </button>
+        <a class="navbar-brand page-scroll" href="#first">Teste PHP</a>
+        <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#one">Exercício 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#two">Exercício 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#three">Exercício 3</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-xs-right">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" data-toggle="modal" title="" href="#aboutModal">Sobre</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section id="one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-xs-center">
+                    <h2 class="m-t-0 text-primary">Exercício 1</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+       <div class="container wow fadeInUp">
+        <p class="lead">
+            1. Escreva um programa que imprima números de 1 a 100. Mas, para múltiplos de 3 imprima
+            “Fizz” em vez do número e para múltiplos de 5 imprima “Buzz”. Para números múltiplos
+            de ambos (3 e 5), imprima “FizzBuzz”.
+        </p>
+        <div class="card-group">
+            <div class="card">
+                <div class="card-block">
+                    <h4 class="card-title">Script PHP</h4>
+                    <p class="card-text">
+                    <code>
+                    <span class="pun">&lt;?</span>
+                    <span class="pln">php</span><br>
+                        $var=0;<br>
+                        for ($i=0; $i < 100; $i++) {<br> 
+                            $var++;<br>
+                            if(($var % 3) == 0  && ($var % 5) == 0)<br>
+                            {<br>
+                              echo("FizzBuzz <br />");<br>
+                            } elseif (($var % 3) == 0) {<br>
+                                echo("Fizz <br />");<br>
+                            }elseif (($var % 5) == 0) {<br>
+                                echo("Buzz <br />");<br>
+                            }else <br>
+                                echo($var."<br />");<br>
+
+                        }<br>
+                        <span class="pun">?&gt;</span>
+                    </code>
+                    </p>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+                <div class="card-block">
+                    <button class="btn btn-lg text-normal btn-primary-outline" id="load">Gerar Múltiplos</button>
+                    <br><br>
+                    <h4 class="card-title">Resultado</h4>
+                    <div id="refresh">
+                        
+                    </div>
+                    <p class="card-text"><?php testeOnclick(); ?></p>
+                </div>
+            </div>
+            <!-- card -->
+        </div>
+    </div>
+</section>
+<section id="two" class="bg-alt">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-xs-center">
+                <h2 class="m-t-0 text-primary">Exercício 2</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <p class="lead">
+                2. Refatore o código abaixo, fazendo as alterações que julgar necessário.<br>
+                <code>
+                    <span class="pun">&lt;?</span>
+                    <span class="pln">php</span><br>
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {<br>
+                    header("Location: http://www.google.com");<br>
+                    exit();<br>
+                    } elseif (isset($_COOKIE['Loggedin']) && $_COOKIE['Loggedin'] == true) {<br>
+                    header("Location: http://www.google.com");<br>
+                    exit();<br>
+                    <span class="pun">?&gt;</span>
+                </code> 
+            </p>
+        </div>    
+        <div class="row">
+            <p class="lead">
+            <h4 class="card-title">Resultado</h4>
+                <code>
+                    <span class="pun">&lt;?</span>
+                    <span class="pln">php</span><br>
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {<br>
+                    header("Location: http://www.google.com");<br>
+                    exit();<br>
+                    } elseif (isset($_COOKIE['Loggedin']) && $_COOKIE['Loggedin'] == true) {<br>
+                    header("Location: http://www.google.com");<br>
+                    exit();<br>
+                    }else { //caso a sessão não esteja iniciada e não estiver logado ao sistema informa mensagem<br>
+                    echo "Você não esta logado ao sistema!";<br>
+                    <span class="pun">?&gt;</span>
+                </code>
+            </p>
+        </div>
+    </div>
+</section>
+<section id="three">
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-lg-12 text-xs-center">
+                <h2 class="m-t-0 text-primary">Exercício 3</h2>
+                <hr class="primary">
+            </div>
+        </div>
+        <div class="row">
+            <p class="lead">
+                3. Refatore o código abaixo, fazendo as alterações que julgar necessário.<br>
+                <code>
+                <span class="pun">&lt;?</span>
+                <span class="pln">php</span><br>
+                class MyUserClass<br>
+                {<br>
+                public function getUserList()<br>
+                {<br>
+                $dbconn = new DatabaseConnection('localhost','user','password');<br>
+                $results = $dbconn->query('select name from user');<br>
+                
+                sort($results);<br>
+                
+                return $results;<br>
+                }<br>
+                }<br>
+                <span class="pun">?&gt;</span>
+                </code>
+            </p>
+        </div>
+        <div class="row">
+            <p class="lead">
+            <h4 class="card-title">Resultado</h4>
+                <code>
+                    <span class="pun">&lt;?</span>
+                    <span class="pln">php</span><br>
+                    class MyUserClass<br>
+                    {<br>
+                    public function getUserList()<br>
+                    {<br>
+                    $dbconn = new PDO('mysql:host=localhost;dbname=mydb', dbuser, dbpw); <br>
+                    $query="SELECT name FROM user";<br>
+                    $data = $dbconn->query($query);<br>
+                    $results = $data->fetchAll(PDO::FETCH_ASSOC);<br>
+                    sort($results);<br>
+                    return $results;<br>
+                    }<br>
+                    }<br>
+                    <span class="pun">?&gt;</span>
+                </code>
+            </p>
+        </div>
+    </div>
+    <br>
+</section>
+<footer id="footer">
+    
+</footer>
+<div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-xs-center">
+                <h2 class="text-xs-center">Alex Sander</h2>
+                <h6 class="text-xs-center">Técnico em Informática - IFSC <br> Gestão da tecnologia da Informação - IFSC</h6>
+                <p class="text-xs-center">
+                    'Seguir em frente, aprendendo sempre, com sede de conhecimento e procurando novos desafios. Esse é meu ideal!'
+                </p>
+                <br>
+                <button class="btn btn-primary btn-lg" data-dismiss="modal" aria-hidden="true"> OK </button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+    <script src="chamarPhpAjax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
