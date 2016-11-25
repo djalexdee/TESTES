@@ -19,7 +19,8 @@ composer create-project --prefer-dist cakephp/app [app_name]
 3. Run command 'commposer' im prompt cmd
 4. Enter in folder bin of yout directory project
 5. Run command 'cake server'
-6. Acess in browser the url localhost:'port'
+6. Acess in browser the url localhost:'port'/Tasks/tarefas
+
 You should now be able to visit the path to where you installed the app and see the default home page.
 
 ## Configuration
